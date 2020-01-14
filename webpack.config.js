@@ -11,7 +11,12 @@ module.exports = (env = {}) => {
   const getCssLoaders = () => {
     return [
       isProd ? MiniCssExtractPlugin.loader : 'style-loader',
-      'css-loader',
+      {
+        loader: 'css-loader',
+        options: {
+          modules: true,
+        },
+      },
     ];
   };
 
@@ -79,7 +84,15 @@ module.exports = (env = {}) => {
         // loading sass/scss styles
         {
           test: /\.s[ac]ss$/,
-          use: [...getCssLoaders(), 'sass-loader'],
+          use: [
+            ...getCssLoaders(),
+            {
+              loader: 'sass-loader',
+              options: {
+                implementation: require('sass'),
+              },
+            },
+          ],
         },
       ],
     },
