@@ -4,8 +4,36 @@
   width: 40px;
   height: 40px;
   border-radius: 4px; 
+  &:hover {
+    cursor: pointer;
+    background-color: style.getColor('hover');
+  }
+}
+
+.inactive {
+  background-color: style.getColor('main-light');
 }
 
 .color-1 {
   background-color: style.getCubeColor(1);
+
+  &:hover {
+    background-color: style.getCubeColor(1);
+  }
+}
+
+.color-2 {
+  background-color: style.getCubeColor(2);
+
+  &:hover {
+    background-color: style.getCubeColor(2);
+  }
+}
+
+.color-3 {
+  background-color: style.getCubeColor(3);
+
+  &:hover {
+    background-color: style.getCubeColor(3);
+  }
 }

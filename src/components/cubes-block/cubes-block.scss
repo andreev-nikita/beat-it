@@ -2,4 +2,12 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
+
+  & > div {
+    margin-right: 4px;
+  }
+
+  & > div:last-child {
+    margin-right: 0;
+  }
 }

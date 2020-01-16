@@ -8,4 +8,12 @@
   background-color: style.getColor('main-dark');
   border-radius: 7px;
   padding: 4px;
+
+  & > div {
+    margin-bottom: 4px;
+  }
+
+  & > div:last-child {
+    margin-bottom: 0;
+  }
 }
