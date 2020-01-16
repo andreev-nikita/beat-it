@@ -1,0 +1,14 @@
+@use '../../style';
+
+.track-controller {
+  width: 190px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: style.getColor('main-light');
+  margin-right: 8px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: style.getColor('hover');
+  }
+}
