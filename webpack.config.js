@@ -17,6 +17,7 @@ module.exports = (env = {}) => {
           modules: {
             localIdentName: '[local]--[hash:base64:5]',
           },
+          localsConvention: 'camelCaseOnly',
         },
       },
     ];

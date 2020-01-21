@@ -3,37 +3,28 @@
 .cube {
   width: 40px;
   height: 40px;
-  border-radius: 4px; 
+  border-radius: 4px;
+
   &:hover {
     cursor: pointer;
-    background-color: style.getColor('hover');
+    background-color: style.get-color('hover');
   }
 }
 
 .inactive {
-  background-color: style.getColor('main-light');
+  background-color: style.get-color('main-light');
 }
 
-.color-1 {
-  background-color: style.getCubeColor(1);
+$cubes-colors-list: style.get-cube-colors-list();
 
-  &:hover {
-    background-color: style.getCubeColor(1);
-  }
-}
+@each $color in $cubes-colors-list {
+  $i: index($cubes-colors-list, $color);
 
-.color-2 {
-  background-color: style.getCubeColor(2);
+  .color-#{$i} {
+    background-color: $color;
 
-  &:hover {
-    background-color: style.getCubeColor(2);
-  }
-}
-
-.color-3 {
-  background-color: style.getCubeColor(3);
-
-  &:hover {
-    background-color: style.getCubeColor(3);
+    &:hover {
+      background-color: $color;
+    }
   }
 }

@@ -3,7 +3,7 @@ import React from 'react';
 import style from './track-controller.scss';
 
 const TrackController = () => {
-  return <div className={style['track-controller']} />;
+  return <div className={style.trackController} />;
 };
 
 export default TrackController;

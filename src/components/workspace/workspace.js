@@ -4,9 +4,9 @@ import { connect } from 'react-redux';
 import style from './workspace.scss';
 import Track from '../track/track';
 
-const Workspace = ({ mix }) => {
+const Workspace = ({ tracks }) => {
   const createTracks = () => {
-    return mix.map(({ id }) => {
+    return tracks.map(({ id }) => {
       return <Track key={id} id={id} />;
     });
   };
@@ -15,7 +15,7 @@ const Workspace = ({ mix }) => {
 };
 
 const mapStateToProps = state => ({
-  mix: state.mix,
+  tracks: state.tracks,
 });
 
 export default connect(mapStateToProps)(Workspace);

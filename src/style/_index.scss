@@ -3,14 +3,12 @@
 
 @use 'default' as scheme;
 
-@function getColor($name) {
+@function get-color($name) {
   $result: map.get(scheme.$colors, $name);
 
   @return $result;
 }
 
-@function getCubeColor($id) {
-  $result: list.nth(map.get(scheme.$colors, 'cubes'), $id);
-
-  @return $result;
+@function get-cube-colors-list() {
+  @return map.get(scheme.$colors, 'cubes');
 }
