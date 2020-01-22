@@ -21,13 +21,13 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'TOGGLE_CUBE_ACTIVITY':
-      const { trackId, cubeId } = action.payload;
+    case 'TOGGLE_BEAT_ACTIVITY':
+      const { trackId, beatId } = action.payload;
 
       const changeActivity = activeIndexes => {
-        const newIndexes = activeIndexes.includes(cubeId)
-          ? activeIndexes.filter(value => value !== cubeId)
-          : [...activeIndexes, cubeId];
+        const newIndexes = activeIndexes.includes(beatId)
+          ? activeIndexes.filter(value => value !== beatId)
+          : [...activeIndexes, beatId];
 
         return newIndexes;
       };

@@ -9,6 +9,6 @@
   @return $result;
 }
 
-@function get-cube-colors-list() {
-  @return map.get(scheme.$colors, 'cubes');
+@function get-beats-colors-list() {
+  @return map.get(scheme.$colors, 'beats');
 }

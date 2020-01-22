@@ -1,6 +1,6 @@
 @use '../../style';
 
-.cube {
+.beat {
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -15,10 +15,10 @@
   background-color: style.get-color('main-light');
 }
 
-$cubes-colors-list: style.get-cube-colors-list();
+$beats-colors-list: style.get-beats-colors-list();
 
-@each $color in $cubes-colors-list {
-  $i: index($cubes-colors-list, $color);
+@each $color in $beats-colors-list {
+  $i: index($beats-colors-list, $color);
 
   .color-#{$i} {
     background-color: $color;
